@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 interface Photo {
-    userId: number;
+    albumId: number;
     id: number;
     title: string;
     thumbnailUrl: string;
@@ -23,8 +23,7 @@ export function SinglePage() {
         <>
             {photos &&(
                 <>
-                    <h1>{photos.title}</h1>
-                    <p>{photos.id}</p>
+                    <h1>Photos in Album {id}</h1>
                     {/* <img src={photo.id} alt={photo.title} /> */}
                     <ul>
                         {photos.map((photo) => (
